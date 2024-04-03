@@ -1,0 +1,32 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navBarLink {
+  display: inline-block;
+  text-align: center;
+  width: 160px;
+  padding: 10px 0;
+  border: 2px solid;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navBarLink:hover {
+  box-shadow: 0 0 50px 15px;
+}
+
+.firstLink {
+  color: var(--neon-blue);
+}
+
+.secondLink {
+  color: var(--neon-purple);
+}

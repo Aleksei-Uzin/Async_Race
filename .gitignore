@@ -1,0 +1,5 @@
+# Ignore dist folder for git
+dist
+
+# Dependency directories
+node_modules
