@@ -1,0 +1,34 @@
+.button {
+  display: inline-block;
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  border: var(--button-border-weight) solid;
+  border-radius: var(--button-border-radius);
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.normal {
+  font-size: 0.8;
+}
+
+.small {
+  --button-padding-horizontal: 0.8rem;
+  --button-border-weight: 1px;
+  font-size: 0.7rem;
+}
+
+.tiny {
+  --button-padding-vertical: 0.2rem;
+  --button-padding-horizontal: 0.4rem;
+  --button-border-weight: 1px;
+  font-size: 0.7rem;
+}
+
+.purple {
+  color: var(--neon-purple);
+}
+
+.blue {
+  color: var(--neon-blue);
+}

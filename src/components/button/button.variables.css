@@ -1,0 +1,7 @@
+:root {
+  --button-padding-vertical: 0.4rem;
+  --button-padding-horizontal: 1rem;
+  --button-border-radius: var(--border-radius);
+  --button-border-weight: 2px;
+  --button-border-color: transparent;
+}
