@@ -1,0 +1,22 @@
+.link {
+  display: inline-block;
+  text-align: center;
+  width: 160px;
+  padding: 10px 0;
+  border: 2px solid;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link:hover {
+  box-shadow: 0 0 50px 15px;
+}
+
+.firstLink {
+  color: var(--neon-blue);
+}
+
+.secondLink {
+  color: var(--neon-purple);
+}
