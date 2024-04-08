@@ -1,5 +1,5 @@
 .button {
-  display: inline-block;
+  display: flex;
   padding: var(--button-padding-vertical) var(--button-padding-horizontal);
   border: var(--button-border-weight) solid;
   border-radius: var(--button-border-radius);

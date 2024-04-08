@@ -1,5 +1,5 @@
 export type ButtonProps = {
-  children: string
+  children: JSX.Element | string
   className?: string
   color?: 'blue' | 'purple'
   disabled?: boolean
