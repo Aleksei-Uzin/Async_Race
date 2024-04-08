@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { List } from '../list'
-import './styles.css'
+import { List } from '../../../components'
+import './routingBar.css'
 
 export const RoutingBar = () => {
   return (
