@@ -13,11 +13,9 @@ export const Button = ({
   size = 'normal',
 }: ButtonProps) => {
   const classes = classNames(
-    {
-      [styles.button]: true,
-      [styles[color]]: true,
-      [styles[size]]: true,
-    },
+    styles.button,
+    styles[color],
+    styles[size],
     className
   )
   return (
