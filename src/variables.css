@@ -2,6 +2,8 @@
   /* Color scheme */
   --neon-blue: #90e4e7;
   --neon-purple: #9f599b;
+  --inactive-gray: #808080;
+  --dark-gray: #242424;
 
   --border-radius: 8px;
 }

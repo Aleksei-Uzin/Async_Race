@@ -1,7 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { Root } from './pages'
+import { Garage, Root } from './pages'
+import { getCars } from './api'
 import './variables.css'
 import './index.css'
 
@@ -12,11 +13,13 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    // TODO: add ErrorPage
     // errorElement: <ErrorPage />,
     children: [
       {
         path: 'garage',
-        element: <h2>GARAGE</h2>,
+        element: <Garage />,
+        loader: getCars,
       },
       {
         path: 'winners',

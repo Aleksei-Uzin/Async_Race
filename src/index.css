@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  color: #ffffff;
-  background-color: #242424;
+  color: #fff;
+  background-color: var(--dark-gray);
 }
 *,
 *:before,
