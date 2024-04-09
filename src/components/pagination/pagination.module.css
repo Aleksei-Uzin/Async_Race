@@ -1,0 +1,10 @@
+.pagination {
+  display: flex;
+  justify-content: end;
+}
+
+.pageNumber {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+}
