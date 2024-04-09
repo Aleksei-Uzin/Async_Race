@@ -11,8 +11,12 @@ export const Button = ({
   loading,
   onClick,
   size = 'normal',
+  type = 'button',
 }: ButtonProps) => {
   const classes = classNames(
+    {
+      [styles['disabled']]: disabled,
+    },
     styles.button,
     styles[color],
     styles[size],
@@ -22,7 +26,7 @@ export const Button = ({
     <button
       className={classes}
       disabled={disabled}
-      type="button"
+      type={type}
       onClick={onClick}
     >
       {children}

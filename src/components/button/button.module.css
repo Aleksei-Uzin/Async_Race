@@ -32,3 +32,8 @@
 .blue {
   color: var(--neon-blue);
 }
+
+.disabled {
+  color: var(--inactive-gray);
+  opacity: 0.4;
+}

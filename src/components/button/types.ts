@@ -6,4 +6,5 @@ export type ButtonProps = {
   loading?: boolean
   onClick?: () => void
   size?: 'normal' | 'small' | 'tiny'
+  type?: 'button' | 'submit'
 }
