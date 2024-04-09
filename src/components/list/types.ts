@@ -6,7 +6,7 @@ export type ListProps = {
 }
 
 export type ListItemProps = {
-  children: ListProps['children'] | string
+  children: ListProps['children'] | string | number
   className?: string
 }
 
