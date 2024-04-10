@@ -1,0 +1,12 @@
+.content {
+  padding-top: 2rem;
+}
+
+.carsList {
+  flex-direction: column;
+  width: 100%;
+}
+
+.carRow {
+  flex-direction: column;
+}
