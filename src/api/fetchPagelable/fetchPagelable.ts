@@ -1,6 +1,6 @@
-import { PAGE_SIZE } from '../constants'
 import { getFullUrl } from '../utils'
 import { IPagination } from './types'
+import { getTotalPages } from './utils'
 
 export const fetchPagelable = async <T>(
   url: string,
@@ -11,7 +11,7 @@ export const fetchPagelable = async <T>(
   const response = await fetch(fullUrl)
   const content: T[] = await response.json()
   const totalElements = parseInt(response.headers.get('X-Total-Count')!)
-  const totalPages = Math.ceil(totalElements / PAGE_SIZE)
+  const totalPages = getTotalPages(totalElements)
 
   return {
     content,
