@@ -7,14 +7,18 @@ import { ModalFormType } from './types'
 type InputType = React.ChangeEvent<HTMLInputElement>
 type SubmitType = React.SyntheticEvent
 
-export const ModalForm = ({ actionType, onClose, onSubmit }: ModalFormType) => {
-  const [color, setColor] = useState('#9f599b')
-  const [name, setName] = useState('')
+export const ModalForm = ({
+  actionType,
+  onClose,
+  onSubmit,
+  payload,
+}: ModalFormType) => {
+  const [color, setColor] = useState(payload?.color || '#9f599b')
+  const [name, setName] = useState(payload?.name || '')
 
   const handleColorChange = (event: InputType) => setColor(event.target.value)
 
-  const handleNameChange = (event: InputType) =>
-    setName(event.target.value.toUpperCase())
+  const handleNameChange = (event: InputType) => setName(event.target.value)
 
   const handleSubmit = (event: SubmitType) => {
     event.preventDefault()
@@ -32,6 +36,8 @@ export const ModalForm = ({ actionType, onClose, onSubmit }: ModalFormType) => {
   }
 
   const inputNameClasses = classNames(styles.formInput, styles.inputName)
+  const isButtonDisabled =
+    !color || !name || (payload?.color === color && payload?.name === name)
 
   return (
     <form onSubmit={handleSubmit}>
@@ -56,7 +62,7 @@ export const ModalForm = ({ actionType, onClose, onSubmit }: ModalFormType) => {
           onChange={handleNameChange}
         />
       </div>
-      <Button disabled={!color || !name} size="small" type="submit">
+      <Button disabled={isButtonDisabled} size="small" type="submit">
         {actionType}
       </Button>
     </form>

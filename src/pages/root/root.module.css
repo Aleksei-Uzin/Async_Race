@@ -1,6 +1,10 @@
-.headerContent {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
+  padding: 1.25rem;
+}
+
+.main {
+  padding: 2rem;
 }

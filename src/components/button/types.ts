@@ -1,7 +1,7 @@
 export type ButtonProps = {
   children: JSX.Element | string
   className?: string
-  color?: 'blue' | 'purple'
+  color?: 'alert' | 'blue' | 'purple'
   disabled?: boolean
   loading?: boolean
   onClick?: () => void

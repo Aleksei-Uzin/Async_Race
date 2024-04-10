@@ -16,4 +16,5 @@ export type ModalFormType = {
   actionType: string
   onClose: () => void
   onSubmit: (params: Omit<ICar, 'id'>) => Promise<void>
+  payload?: ICar
 }
