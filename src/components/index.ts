@@ -1,4 +1,5 @@
 export * from './button'
+export * from './car'
 export * from './list'
 export * from './modal'
 export * from './pagination'
