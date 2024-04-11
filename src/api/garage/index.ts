@@ -1,2 +1,6 @@
-export * from './garage'
+export * from './createCar'
+export * from './deleteCar'
+export * from './getCar'
+export * from './getCars'
+export * from './updateCar'
 export * from './types'
