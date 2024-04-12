@@ -7,8 +7,8 @@ import { ModalForm } from './modalForm'
 export const Modal = ({ children, isOpen, className }: ModalProps) => {
   const classes = classNames(
     {
-      [styles['displayBlock']]: isOpen,
-      [styles['displayNone']]: !isOpen,
+      [styles.displayBlock]: isOpen,
+      [styles.displayNone]: !isOpen,
     },
     styles.modal,
     className

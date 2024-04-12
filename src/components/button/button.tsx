@@ -15,7 +15,7 @@ export const Button = ({
 }: ButtonProps) => {
   const classes = classNames(
     {
-      [styles['disabled']]: disabled,
+      [styles.disabled]: disabled,
     },
     styles.button,
     styles[color],
