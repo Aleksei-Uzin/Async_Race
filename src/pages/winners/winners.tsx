@@ -1,6 +1,7 @@
 import { getWinners } from '../../api'
-import { Pagination, PaginationProvider } from '../../components'
+import { PaginationProvider } from '../../components'
 import { useDataFromLoader } from '../../hooks'
+import { WinnersPagination } from './winnersPagination'
 import { WinnersTable } from './winnersTable'
 
 export const Winners = () => {
@@ -8,12 +9,11 @@ export const Winners = () => {
 
   return (
     <PaginationProvider pagination={pagination}>
-      <h2>WINNERS</h2>
-      <WinnersTable>
+      <WinnersTable title="Winners">
         <WinnersTable.Head />
         <WinnersTable.Body />
       </WinnersTable>
-      <Pagination onClick={() => {}} {...pagination} />
+      <WinnersPagination />
     </PaginationProvider>
   )
 }

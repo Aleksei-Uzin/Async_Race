@@ -3,8 +3,13 @@ import { WinnersTableHead } from './winnersTableHead'
 import { WinnersTableProps } from './types'
 import styles from './winnersTable.module.css'
 
-export const WinnersTable = ({ children }: WinnersTableProps) => {
-  return <table className={styles.table}>{children}</table>
+export const WinnersTable = ({ children, title }: WinnersTableProps) => {
+  return (
+    <table className={styles.table}>
+      <caption className={styles.caption}>{title}</caption>
+      {children}
+    </table>
+  )
 }
 
 WinnersTable.Head = WinnersTableHead

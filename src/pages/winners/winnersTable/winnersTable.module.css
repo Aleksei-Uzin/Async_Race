@@ -4,6 +4,15 @@
   border-collapse: collapse;
 }
 
+.caption {
+  padding-bottom: 1rem;
+  text-align: start;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--neon-blue);
+}
+
 .tableHead {
   border-radius: var(--border-radius);
   box-shadow: 0 0 0.5rem 0.125rem var(--neon-purple);
