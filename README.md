@@ -1,5 +1,7 @@
 # Async_Race
 
+## Final score: 180
+
 ## Checklist
 
 ## 🚀 UI Deployment
