@@ -1,2 +1,2 @@
-export * from './winners'
+export * from './getWinners'
 export * from './types'
