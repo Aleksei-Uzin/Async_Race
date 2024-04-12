@@ -1,5 +1,10 @@
-import { IPagination } from '../../api'
+import { ICar, IPagination, IWinner } from '../../api'
 
-export type PaginationProps<T> = IPagination<T> & {
+export type PaginationProps = IPagination<ICar | IWinner> & {
   onClick: (newPageNumber: number) => void
 }
+
+export type PaginationMenuProps = Omit<
+  PaginationProps,
+  'content' | 'totalElements'
+>

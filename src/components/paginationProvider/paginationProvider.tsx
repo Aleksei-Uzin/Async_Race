@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react'
-import { ICar, IPagination } from '../../api'
+import { ICar, IPagination, IWinner } from '../../api'
 import { IPaginationContext, IPaginationProviderProps } from './types'
 
 export const PaginationContext = createContext<IPaginationContext>(
@@ -9,9 +9,9 @@ export const PaginationContext = createContext<IPaginationContext>(
 export function PaginationProvider({
   children,
   pagination,
-}: IPaginationProviderProps) {
+}: IPaginationProviderProps<ICar | IWinner>) {
   const [state, setState] = useState(pagination)
-  const handleState = (arg: IPagination<ICar>) => setState(arg)
+  const handleState = (arg: IPagination<ICar | IWinner>) => setState(arg)
   const value = { pagination: state, setPagination: handleState }
 
   return (

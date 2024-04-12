@@ -1,10 +1,11 @@
-import { ICar, IPagination } from '../../api'
+import { ICar, IPagination, IWinner } from '../../api'
 
 export interface IPaginationContext {
-  pagination: IPagination<ICar>
-  setPagination?: (arg: IPagination<ICar>) => void
+  pagination: IPagination<ICar | IWinner>
+  setPagination?: (arg: IPagination<ICar | IWinner>) => void
 }
 
-export interface IPaginationProviderProps extends IPaginationContext {
+export interface IPaginationProviderProps<T> {
   children: JSX.Element[]
+  pagination: IPagination<T>
 }
