@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 0.5rem 0.125rem var(--neon-purple);
+  color: var(--neon-blue);
+}
+
+.headItem {
+  padding: 0.5rem 0;
+}
+
+.bodyItem {
+  position: relative;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.icon {
+  left: auto;
+}
