@@ -5,6 +5,20 @@
   padding: 1.25rem;
 }
 
+.title {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--neon-blue);
+}
+
+.link:hover {
+  text-shadow: var(--neon-blue) 0 0 1rem;
+}
+
 .main {
   padding: 2rem;
 }

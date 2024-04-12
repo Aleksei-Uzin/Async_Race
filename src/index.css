@@ -13,3 +13,7 @@ html,
 body {
   margin: 0;
 }
+
+#root {
+  min-width: 31.25rem;
+}

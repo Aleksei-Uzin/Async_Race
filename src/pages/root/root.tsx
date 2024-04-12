@@ -1,18 +1,19 @@
 import { Link, Outlet } from 'react-router-dom'
-import { NavigationBar } from './navigationBar'
-import './styles.css'
-import { useState } from 'react'
+import { RoutingBar } from './routingBar'
+import styles from './root.module.css'
 
 export const Root = () => {
   return (
     <>
-      <header className="headerContent">
-        <NavigationBar />
-        <h1>
-          <Link to="/">Async Race</Link>
+      <header className={styles.header}>
+        <RoutingBar />
+        <h1 className={styles.title}>
+          <Link to="/" className={styles.link}>
+            Async Race
+          </Link>
         </h1>
       </header>
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </>

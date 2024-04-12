@@ -1,8 +1,8 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { Garage, Root } from './pages'
-import { getCars } from './api'
+import { Garage, Root, Winners } from './pages'
+import { getCars, getWinners } from './api'
 import './variables.css'
 import './index.css'
 
@@ -23,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'winners',
-        element: <h2>WINNERS</h2>,
+        element: <Winners />,
+        loader: getWinners,
       },
     ],
   },
