@@ -13,18 +13,18 @@ export const GarageMenu = () => {
     const response = await createCar(params)
     const newTotalElements = pagination.totalElements + 1
 
-    if (currentPage === totalPages && content.length < PAGE_SIZE) {
+    if (currentPage === totalPages && content.length < PAGE_SIZE.SEVEN) {
       setPagination({
         ...pagination,
         content: [...content, response],
         totalElements: newTotalElements,
-        currentPage: getTotalPages(newTotalElements),
+        currentPage: getTotalPages(newTotalElements, PAGE_SIZE.SEVEN),
       })
     } else {
       setPagination({
         ...pagination,
         totalElements: newTotalElements,
-        currentPage: getTotalPages(newTotalElements),
+        currentPage: getTotalPages(newTotalElements, PAGE_SIZE.SEVEN),
       })
     }
   }

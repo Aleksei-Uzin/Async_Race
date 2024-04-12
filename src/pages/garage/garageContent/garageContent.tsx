@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { List, Pagination, PaginationContext } from '../../../components'
 import { GarageCarItem } from '../garageCarItem'
-import { getCars } from '../../../api'
+import { ICar, getCars } from '../../../api'
 import styles from './garageContent.module.css'
 
 export const GarageContent = () => {
@@ -23,7 +23,7 @@ export const GarageContent = () => {
       <List key={pagination.totalElements} className={styles.carsList}>
         {cars.map(({ id, ...rest }) => (
           <List.Item key={id} className={styles.carRow}>
-            <GarageCarItem id={id} {...rest} />
+            <GarageCarItem id={id} {...(rest as ICar)} />
           </List.Item>
         ))}
       </List>

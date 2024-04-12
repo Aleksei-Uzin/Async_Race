@@ -1,7 +1,13 @@
 import { useContext } from 'react'
-import { ICar, deleteCar, getTotalPages, updateCar } from '../../../api'
-import { List, Modal, PaginationContext } from '../../../components'
-import { IconCar, IconGear } from '../../../icons'
+import {
+  ICar,
+  PAGE_SIZE,
+  deleteCar,
+  getTotalPages,
+  updateCar,
+} from '../../../api'
+import { Car, List, Modal, PaginationContext } from '../../../components'
+import { IconGear } from '../../../icons'
 import styles from './garageCarItem.module.css'
 import { GarageCarItemProps } from './types'
 import { useModal } from '../../../hooks'
@@ -18,7 +24,7 @@ export const GarageCarItem = (props: GarageCarItemProps) => {
       ...pagination,
       content: pagination.content.filter(({ id }) => id !== carId),
       totalElements: newTotalElements,
-      totalPages: getTotalPages(newTotalElements),
+      totalPages: getTotalPages(newTotalElements, PAGE_SIZE.SEVEN),
     })
   }
 
@@ -35,7 +41,7 @@ export const GarageCarItem = (props: GarageCarItemProps) => {
   return (
     <>
       <div className={styles.carBox}>
-        <IconCar className={styles.icon} color={color} />
+        <Car color={color} />
       </div>
       <div className={styles.carMenu}>
         <List>
