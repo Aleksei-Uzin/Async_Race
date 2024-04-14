@@ -5,7 +5,9 @@ export type GarageCarItemProps = ICar
 export type GarageCarMenuProps = {
   carId: number
   content: string
+  currentElement: HTMLDivElement
   openModal: () => void
+  width: number
 }
 
 export type GarageCarModalProps = {

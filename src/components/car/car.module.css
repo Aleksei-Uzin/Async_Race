@@ -1,3 +1,11 @@
+.box {
+  position: relative;
+  display: inline-block;
+  height: 2.5rem;
+  width: 7.5rem;
+  overflow: hidden;
+}
+
 .icon {
   position: absolute;
   top: 1rem;
