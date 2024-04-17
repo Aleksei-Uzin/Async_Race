@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import classNames from 'classNames'
+import classnames from 'classNames'
 import { IconCar } from '../../icons'
 import { CarProps } from './types'
 import styles from './car.module.css'
@@ -7,7 +7,7 @@ import styles from './car.module.css'
 export type Ref = HTMLDivElement
 
 export const Car = forwardRef<Ref, CarProps>(({ color, className }, ref) => {
-  const classes = classNames(styles.icon, className)
+  const classes = classnames(styles.icon, className)
 
   return (
     <div ref={ref} className={styles.box}>

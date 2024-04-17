@@ -1,4 +1,4 @@
-import classNames from 'classNames'
+import classnames from 'classNames'
 import { Button } from '../button'
 import { IconClose } from '../../icons'
 import styles from './modal.module.css'
@@ -9,7 +9,7 @@ export const ModalHeader = ({
   className,
   onClose,
 }: ModalHeaderProps) => {
-  const classes = classNames(styles.modalHeader, className)
+  const classes = classnames(styles.modalHeader, className)
 
   return (
     <div className={classes}>

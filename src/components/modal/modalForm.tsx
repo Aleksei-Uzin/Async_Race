@@ -1,4 +1,4 @@
-import classNames from 'classNames'
+import classnames from 'classNames'
 import { useState } from 'react'
 import { Button } from '../button'
 import styles from './modal.module.css'
@@ -35,7 +35,7 @@ export const ModalForm = ({
     onClose()
   }
 
-  const inputNameClasses = classNames(styles.formInput, styles.inputName)
+  const inputNameClasses = classnames(styles.formInput, styles.inputName)
   const isButtonDisabled =
     !color || !name || (payload?.color === color && payload?.name === name)
 

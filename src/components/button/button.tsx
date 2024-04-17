@@ -1,4 +1,4 @@
-import classNames from 'classNames'
+import classnames from 'classNames'
 import { ButtonProps } from './types'
 import styles from './button.module.css'
 import './button.variables.css'
@@ -13,7 +13,7 @@ export const Button = ({
   size = 'normal',
   type = 'button',
 }: ButtonProps) => {
-  const classes = classNames(
+  const classes = classnames(
     {
       [styles.disabled]: disabled,
     },

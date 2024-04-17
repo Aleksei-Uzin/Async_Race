@@ -1,11 +1,11 @@
-import classNames from 'classNames'
+import classnames from 'classNames'
 import { ModalProps } from './types'
 import styles from './modal.module.css'
 import { ModalHeader } from './modalHeader'
 import { ModalForm } from './modalForm'
 
 export const Modal = ({ children, isOpen, className }: ModalProps) => {
-  const classes = classNames(
+  const classes = classnames(
     {
       [styles.displayBlock]: isOpen,
       [styles.displayNone]: !isOpen,
